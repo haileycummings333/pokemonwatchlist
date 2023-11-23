@@ -1,0 +1,29 @@
+Add pokemon [20 points]
+    The app has a dedicated field and
+    button for the user to enter the name or id of a pokemon to add
+    Upon submitting a value, the app will validate that the value entered is a valid pokemon
+       The value entered is not a valid pokemon if it contains any of the following characters % & * (
+            @ ) ! ; : < >
+        If the value entered is a number, it cannot be negative or greater than 1010,
+    the app will add the Ticker to the watchlist and show the corresponding profile [5 points]
+    The app will display a Toast indicating that the ticker entered was invalid [5 point]
+
+Watchlist [30 points]
+    The app will have a list of pokemon on a watchlist [15 points]
+        The list of pokemon will display both the id and name of the pokemon [10 points]
+        Selecting a pokemon from the list will show the corresponding pokemon profile [5 points]
+
+View pokemon profile [40 points]
+    The user will be able to see all of the information for the selected pokemon.
+    All the information for the pokemon profile is retrieved from an external web API and displayed
+        within the app: Pokemon name, image of the pokemon, pokedex id number, weight, height,
+        baseXP, move, and one ability [25 points]
+    Show the image of the company as an image NOT as a URL [10 points]
+    Whatever view is used to display this information must support scrolling [5 points]
+
+Extra credit:
+    Use a “Clear” button. When tapped the current pokemon profile and the content of the search bar
+        is set to empty [5 points]
+    Add a “Clear” button. When tapped, all the pokemons in the list should be deleted [5 points]
+    Use a higher quality sprite than the one provided by the PokeAPI [5 points]
+        See https://github.com/HybridShivam/Pokemon/tree/master/assets/images
