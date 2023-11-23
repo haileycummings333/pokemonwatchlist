@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Initialize other UI components and set their listeners
+
     }
 
     private void addPokemonToWatchlist() {

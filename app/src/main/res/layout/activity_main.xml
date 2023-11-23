@@ -1,25 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
+    android:scrollbars="vertical"
+    android:textAlignment="viewStart"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editTextPokemon"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Constraint"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Pokemon name or ID"/>
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/buttonAddPokemon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Pokemon"/>
+        <Button
+            android:id="@+id/buttonAddPokemon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="Submit"
+            app:layout_constraintStart_toEndOf="@+id/editTextPokemon"
+            app:layout_constraintTop_toTopOf="@+id/editTextPokemon" />
 
-    <!-- Other UI components for watchlist and profile display -->
+        <EditText
+            android:id="@+id/editTextPokemon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="20dp"
+            android:autofillHints="stockTicker"
+            android:ems="10"
+            android:hint="Pokemon ID or Name"
+            app:layout_constraintStart_toEndOf="@+id/searchBar"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/searchBar"
+            android:layout_width="68dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="25dp"
+            android:text="Search"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022" />
+
+        <TextView
+            android:id="@+id/PokeName"
+            android:layout_width="132dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/logoView"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <TextView
+            android:id="@+id/pokedexIdTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="75dp"
+            android:text="Pokedex ID:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PokeName" />
+
+        <TextView
+            android:id="@+id/weightTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Weight:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/pokedexIdTV"
+            app:layout_constraintTop_toBottomOf="@+id/pokedexIdTV" />
+
+        <TextView
+            android:id="@+id/heightTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Height:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/weightTV"
+            app:layout_constraintTop_toBottomOf="@+id/weightTV" />
+
+        <TextView
+            android:id="@+id/baseXPTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Base XP:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/heightTV"
+            app:layout_constraintTop_toBottomOf="@+id/heightTV" />
+
+        <TextView
+            android:id="@+id/moveTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Move:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/baseXPTV"
+            app:layout_constraintTop_toBottomOf="@+id/baseXPTV" />
+
+        <TextView
+            android:id="@+id/abilityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Ability:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/moveTV"
+            app:layout_constraintTop_toBottomOf="@+id/moveTV" />
+
+
+        <TextView
+            android:id="@+id/pokedexIDText"
+            android:layout_width="157dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="104dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/pokedexIdTV"
+            app:layout_constraintTop_toTopOf="@+id/pokedexIdTV" />
+
+        <TextView
+            android:id="@+id/weightText"
+            android:layout_width="157dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="0dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/pokedexIDText"
+            app:layout_constraintTop_toTopOf="@+id/weightTV" />
+
+        <TextView
+            android:id="@+id/heightText"
+            android:layout_width="157dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="0dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/pokedexIDText"
+            app:layout_constraintTop_toTopOf="@+id/heightTV" />
+
+        <TextView
+            android:id="@+id/baseXPText"
+            android:layout_width="157dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="0dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/pokedexIDText"
+            app:layout_constraintTop_toTopOf="@+id/baseXPTV" />
+
+
+        <TextView
+            android:id="@+id/moveText"
+            android:layout_width="157dp"
+            android:layout_height="24dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/pokedexIDText"
+            app:layout_constraintTop_toTopOf="@+id/moveTV" />
+
+        <TextView
+            android:id="@+id/abilityText"
+            android:layout_width="157dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/pokedexIDText"
+            app:layout_constraintTop_toTopOf="@+id/abilityTV" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchBar" />
+
+        <ImageView
+            android:id="@+id/logoView"
+            android:layout_width="83dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
