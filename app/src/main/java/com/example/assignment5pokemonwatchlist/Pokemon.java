@@ -9,6 +9,10 @@ public class Pokemon {
     private String move;
     private String ability;
 
+    public Pokemon(String name, int id, int weight, int height, String base, String move, String ability){
+
+    }
+
 
     public String getName() {
         return name;
