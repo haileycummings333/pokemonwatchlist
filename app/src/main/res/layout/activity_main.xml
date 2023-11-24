@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,17 +9,12 @@
     android:textAlignment="viewStart"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/Constraint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
         <Button
             android:id="@+id/buttonAddPokemon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="7dp"
-            android:text="Submit"
+            android:text="@string/submit"
             app:layout_constraintStart_toEndOf="@+id/editTextPokemon"
             app:layout_constraintTop_toTopOf="@+id/editTextPokemon" />
 
@@ -30,7 +26,7 @@
             android:layout_marginTop="20dp"
             android:autofillHints="stockTicker"
             android:ems="10"
-            android:hint="Pokemon ID or Name"
+            android:hint="@string/pokemon_id_or_name"
             app:layout_constraintStart_toEndOf="@+id/searchBar"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,8 +34,8 @@
             android:id="@+id/searchBar"
             android:layout_width="68dp"
             android:layout_height="30dp"
-            android:layout_marginTop="25dp"
-            android:text="Search"
+            android:layout_marginTop="20dp"
+            android:text="@string/search"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -49,38 +45,38 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.022" />
 
-        <TextView
-            android:id="@+id/PokeName"
-            android:layout_width="132dp"
-            android:layout_height="18dp"
-            android:layout_marginTop="20dp"
-            android:textAlignment="center"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/logoView"
-            app:layout_constraintTop_toBottomOf="@+id/divider" />
+    <TextView
+        android:id="@+id/PokeName"
+        android:layout_width="132dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.727"
+        app:layout_constraintStart_toEndOf="@+id/logoView"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
 
-        <TextView
-            android:id="@+id/pokedexIdTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="39dp"
-            android:layout_marginTop="75dp"
-            android:text="Pokedex ID:"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/PokeName" />
+    <TextView
+        android:id="@+id/pokedexIdTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="84dp"
+        android:text="@string/pokedex_id"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PokeName" />
 
-        <TextView
+    <TextView
             android:id="@+id/weightTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Weight:"
+            android:text="@string/weight"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -92,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Height:"
+            android:text="@string/height"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -103,8 +99,8 @@
             android:id="@+id/baseXPTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:text="Base XP:"
+            android:layout_marginTop="20dp"
+            android:text="@string/base_xp"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -116,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Move:"
+            android:text="@string/move"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -128,7 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Ability:"
+            android:text="@string/ability"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -211,5 +207,20 @@
             app:layout_constraintTop_toBottomOf="@+id/divider"
             app:srcCompat="@android:drawable/ic_menu_info_details" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/abilityText">
+
+        <ListView
+            android:id="@+id/pokeList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

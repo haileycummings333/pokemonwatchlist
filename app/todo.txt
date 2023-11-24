@@ -1,12 +1,12 @@
 Add pokemon [20 points]
-    The app has a dedicated field and
-    button for the user to enter the name or id of a pokemon to add
+    The app has a dedicated field and  ✓
+    button for the user to enter the name or id of a pokemon to add ✓
     Upon submitting a value, the app will validate that the value entered is a valid pokemon
        The value entered is not a valid pokemon if it contains any of the following characters % & * (
-            @ ) ! ; : < >
-        If the value entered is a number, it cannot be negative or greater than 1010,
+            @ ) ! ; : < >    ✓
+        If the value entered is a number, it cannot be negative or greater than 1010,   ✓
     the app will add the Ticker to the watchlist and show the corresponding profile [5 points]
-    The app will display a Toast indicating that the ticker entered was invalid [5 point]
+    The app will display a Toast indicating that the ticker entered was invalid [5 point]  ✓
 
 Watchlist [30 points]
     The app will have a list of pokemon on a watchlist [15 points]
