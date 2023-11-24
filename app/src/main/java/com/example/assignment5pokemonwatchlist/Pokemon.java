@@ -10,7 +10,13 @@ public class Pokemon {
     private String ability;
 
     public Pokemon(String name, int id, int weight, int height, String base, String move, String ability){
-
+        this.name = name;
+        this.id = id;
+        this.weight = weight;
+        this.height = height;
+        this.base = base;
+        this.move = move;
+        this.ability = ability;
     }
 
 
