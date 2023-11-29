@@ -1,8 +1,4 @@
 package com.example.assignment5pokemonwatchlist;
-
-
-import static java.security.AccessController.getContext;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
